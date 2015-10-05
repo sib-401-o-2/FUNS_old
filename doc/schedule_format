@@ -1,0 +1,73 @@
+Simple JSON.
+
+time.json:
+{
+	"version": 1,		// file's version
+	"classDuration": 45,	// standart duration of class
+	"standartBreak": 5,	// standart break between classes in two-hour class
+	"standartClassBreak",	// standart break between thow-hour classes
+	"midleClass": 3,	// class, after which will come "great break"
+	"greatBreak": 40,	// duration of great break
+	"startTimeHour": 8,	// hour of firs class beginning
+	"startTimeMinute": 0,	// minute of first class beginning
+	"semesterBeginning": "01.09",	// DAY.MONTH
+	"semesterEnd": "31.12"		// start and end of semester
+}
+
+Class imortance:
+* 0 -- none
+* 1 -- low
+* 2 -- medium
+* 3 -- heavy
+
+schedule.json:		// if no such file, FUNS will search for this two:
+	scheduleOdd.json:	// for odd weeks
+	scheduleEven.json:	// for even weeks
+{
+	"version": 1,
+	"monday": [	// day of week
+		{
+			"id": 1,				// number of two-hour class
+			"name": "Math",				// name of subject
+			"teacherName": "Kekov Kek Lolavich",	// teacher's name
+			"cabinet": "123B, building 2",		// cabinet and university building
+			"importance": 0				// importance of class
+		},
+		{
+			"id": 2,				// number of two-hour class
+			"name": "Logic",			// name of subject
+			"teacherName": "4chan master",		// teacher's name
+			"cabinet": "666, hell",			// cabinet and university building
+			"importance": 2				// importance of class
+		}
+	],
+	"tuesday": [
+		{
+			"id": 3,				// number of two-hour class
+			"name": "Logic",			// name of subject
+			"teacherName": "4chan master",		// teacher's name
+			"cabinet": "666, hell",			// cabinet and university building
+			"importance": 1				// importance of class
+		}
+	],
+	"wednesday": [
+		{
+			"id": 1,				// number of two-hour class
+			"name": "Logic",			// name of subject
+			"teacherName": "4chan master",		// teacher's name
+			"cabinet": "666, hell",			// cabinet and university building
+			"importance": 3				// importance of class
+		},
+		{
+			"id": 5,				// number of two-hour class
+			"name": "Logic",			// name of subject
+			"teacherName": "4chan master",		// teacher's name
+			"cabinet": "666, hell",			// cabinet and university building
+			"importance": 3				// importance of class
+		}
+	],
+	"thursday": null,	// null for day off
+	"friday": null,
+	"saturday": null,
+	"sunday": null
+}
