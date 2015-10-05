@@ -1,5 +1,6 @@
 package siberia.outlaw.funs;
 
+import org.json.JSONObject;
 /**
  * Created by asmodeus on 01.10.15.
  */
