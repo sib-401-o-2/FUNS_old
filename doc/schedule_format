@@ -2,16 +2,16 @@ Simple JSON.
 
 time.json:
 {
-	"version": 1,		// file's version
-	"classDuration": 45,	// standart duration of class
-	"standartBreak": 5,	// standart break between classes in two-hour class
-	"standartClassBreak",	// standart break between thow-hour classes
-	"midleClass": 3,	// class, after which will come "great break"
-	"greatBreak": 40,	// duration of great break
-	"startTimeHour": 8,	// hour of firs class beginning
-	"startTimeMinute": 0,	// minute of first class beginning
+	"version": 1,			// file's version
+	"classDuration": 45,		// standard duration of class
+	"standardBreak": 5,		// standard break between classes in two-hour class
+	"standardClassBreak": 10,	// standard break between two-hour classes
+	"middleClass": 3,		// class, after which will come "great break"
+	"greatBreak": 40,		// duration of great break
+	"startTimeHour": 8,		// hour of firs class beginning
+	"startTimeMinute": 0,		// minute of first class beginning
 	"semesterBeginning": "01.09",	// DAY.MONTH
-	"semesterEnd": "31.12"		// start and end of semester
+	"semesterEnd": "25.12"		// start and end of semester
 }
 
 Class imortance:
@@ -25,45 +25,49 @@ schedule.json:		// if no such file, FUNS will search for this two:
 	scheduleEven.json:	// for even weeks
 {
 	"version": 1,
-	"monday": [	// day of week
+	"courses":[
 		{
-			"id": 1,				// number of two-hour class
-			"name": "Math",				// name of subject
+			"id": 0,				// unique id of course, from 0
+			"name": "Math",				// name
 			"teacherName": "Kekov Kek Lolavich",	// teacher's name
-			"cabinet": "123B, building 2",		// cabinet and university building
-			"importance": 0				// importance of class
+			"importance": 0				// importance of course
 		},
 		{
-			"id": 2,				// number of two-hour class
-			"name": "Logic",			// name of subject
-			"teacherName": "4chan master",		// teacher's name
-			"cabinet": "666, hell",			// cabinet and university building
-			"importance": 2				// importance of class
+			"id": 1,
+			"name": "Logic",
+			"teacherName": "4chan master",
+			"importance": 2
+		}
+	],
+	"monday": [	// day of week
+		{
+			"index": 2,				// index, from 1
+			"course_id": 1,				// number of two-hour class
+			"cabinet": "123B, building 2"		// cabinet and university building
+		},
+		{
+			"index": 3,
+			"course_id": 2,
+			"cabinet": "666, lel"
 		}
 	],
 	"tuesday": [
 		{
-			"id": 3,				// number of two-hour class
-			"name": "Logic",			// name of subject
-			"teacherName": "4chan master",		// teacher's name
-			"cabinet": "666, hell",			// cabinet and university building
-			"importance": 1				// importance of class
+			"index": 1,
+			"course_id": 1,
+			"cabinet": "123B, building 3"
 		}
 	],
 	"wednesday": [
 		{
-			"id": 1,				// number of two-hour class
-			"name": "Logic",			// name of subject
-			"teacherName": "4chan master",		// teacher's name
-			"cabinet": "666, hell",			// cabinet and university building
-			"importance": 3				// importance of class
+			"index": 4,
+			"course_id": 2,
+			"cabinet": "123B, building 2"
 		},
 		{
-			"id": 5,				// number of two-hour class
-			"name": "Logic",			// name of subject
-			"teacherName": "4chan master",		// teacher's name
-			"cabinet": "666, hell",			// cabinet and university building
-			"importance": 3				// importance of class
+			"index": 5,
+			"course_id": 1,
+			"cabinet": "123B, building 3"
 		}
 	],
 	"thursday": null,	// null for day off
