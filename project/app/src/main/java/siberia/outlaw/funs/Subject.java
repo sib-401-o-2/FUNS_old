@@ -12,14 +12,25 @@ public class Subject {
     private String cabinet;
     Importance importance;
 
+    public static Importance intToImportance(int i) {
+        switch (i) {
+            case 0:
+                return Importance.NONE;
+            case 1:
+                return Importance.LOW;
+            case 2:
+                return Importance.MEDIUM;
+            case 3:
+                return Importance.HEAVY;
+        }
+        return Importance.NONE;
+    }
+
     public Subject(String name, String teacher, String cabinet, Importance importance) {
         this.name = name;
         this.teacher = teacher;
         this.cabinet = cabinet;
         this.importance = importance;
-    }
-    public Subject() {
-
     }
 
     public String getName() {

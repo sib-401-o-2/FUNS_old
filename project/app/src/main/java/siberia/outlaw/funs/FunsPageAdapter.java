@@ -14,6 +14,7 @@ import org.joda.time.Instant;
 import org.joda.time.LocalDate;
 import org.joda.time.Period;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -23,42 +24,24 @@ import java.util.Locale;
  * Created by asmodeus on 01.10.15.
  */
 public class FunsPageAdapter extends PagerAdapter {
+    protected LocalDate startDate;
+    protected LocalDate endDate;
 
-
-    //private List<LocalDate> mItems = new ArrayList<>();
-    LocalDate startDate;
-    LocalDate endDate;
 
     public FunsPageAdapter() {
-        startDate = new LocalDate()
-                .withMonthOfYear(DateTimeConstants.SEPTEMBER)
-                .withDayOfMonth(1);
-        endDate = new LocalDate()
-                .withMonthOfYear(DateTimeConstants.DECEMBER)
-                .withDayOfMonth(31);
-//        for (LocalDate date = startDate; date.isBefore(endDate); date = date.plusDays(1))
-//        {
-//            mItems.add(date);
-//        }
-    }
-
-    public LocalDate getStartDate() {
-        return startDate;
+        startDate = Funs.getInstance().getSemesterBeginning();
+        endDate = Funs.getInstance().getSemesterEnd();
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        System.out.println("page " + position);
         View view = LayoutInflater.from(container.getContext())
                 .inflate(R.layout.layout_page, container, false);
 
         TextView textView = (TextView) view.findViewById(R.id.title);
-        textView.setText("Page: " + position);
+        textView.setText(Funs.getInstance().getDayString(position));
 
-
-        List<Subject> rec = new ArrayList<Subject>();
-        populateRecords(rec);
-        FunsDayAdapter adapter = new FunsDayAdapter(rec);
+        FunsDayAdapter adapter = new FunsDayAdapter(position);
         LinearLayoutManager llm = new LinearLayoutManager(container.getContext());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
 
@@ -69,15 +52,6 @@ public class FunsPageAdapter extends PagerAdapter {
         container.addView(view);
 
         return view;
-    }
-
-    private void populateRecords(List<Subject> records){
-        for (int i = 0; i<50; i++){
-            Subject record = new Subject();
-            record.setName("Item №" + i);
-            record.setImportance(Subject.Importance.values()[i%4]);
-            records.add(record);
-        }
     }
 
     @Override

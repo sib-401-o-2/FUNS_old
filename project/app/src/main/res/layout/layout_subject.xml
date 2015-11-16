@@ -29,13 +29,48 @@
         <!--android:src="@drawable/"/>-->
 
     <TextView
-        android:id="@+id/subject_name"
-        android:layout_width="wrap_content"
+        android:id="@+id/subject_time"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         tools:text="name"
         android:textSize="20sp"
-        android:layout_gravity="center_vertical" />
+        android:layout_gravity="center"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="175dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/subject_name"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/subject_cab_and_teacher"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch1"
+        android:layout_gravity="center" />
+
     <!--android:layout_toRightOf="@+id/recyclerViewItemIcon"-->
     <!--android:layout_toEndOf="@+id/recyclerViewItemIcon"-->
 </LinearLayout>
