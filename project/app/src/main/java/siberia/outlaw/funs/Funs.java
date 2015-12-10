@@ -76,9 +76,9 @@ public class Funs {
         LocalDate date = getDateFromPosition(position);
         StringBuilder strb = new StringBuilder(date.toString("dd MMMM"));
         if (time.isOdd(date))
-            strb.append(" O");
+            strb.append(" НН");
         else
-            strb.append(" E");
+            strb.append(" ЧН");
         return strb.toString();
     }
 
