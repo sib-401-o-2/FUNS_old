@@ -55,14 +55,31 @@
             android:layout_gravity="center"
             android:gravity="center_horizontal" />
 
-        <TextView
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Small Text"
+            android:id="@+id/subject_cab"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal" />
+
+            <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Small Text"
-            android:id="@+id/subject_cab_and_teacher"
+            android:id="@+id/subject_teacher"
             android:layout_gravity="center"
             android:gravity="center_horizontal" />
+
+        </LinearLayout>
     </LinearLayout>
 
     <Switch

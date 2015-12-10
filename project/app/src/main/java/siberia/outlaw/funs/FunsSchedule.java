@@ -103,7 +103,8 @@ public class FunsSchedule {
                 course.getName(),
                 course.getTeacher(),
                 s.getCabinet(),
-                course.getImportance()
+                course.getImportance(),
+                s.getIndex()
         );
     }
 

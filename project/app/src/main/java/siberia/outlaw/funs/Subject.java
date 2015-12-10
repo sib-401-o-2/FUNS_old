@@ -10,6 +10,12 @@ public class Subject {
     private String name;
     private String teacher;
     private String cabinet;
+
+    public int getIndex() {
+        return index;
+    }
+
+    private int index;
     Importance importance;
 
     public static Importance intToImportance(int i) {
@@ -26,11 +32,12 @@ public class Subject {
         return Importance.NONE;
     }
 
-    public Subject(String name, String teacher, String cabinet, Importance importance) {
+    public Subject(String name, String teacher, String cabinet, Importance importance, int index) {
         this.name = name;
         this.teacher = teacher;
         this.cabinet = cabinet;
         this.importance = importance;
+        this.index = index;
     }
 
     public String getName() {

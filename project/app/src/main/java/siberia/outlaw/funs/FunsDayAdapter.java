@@ -28,7 +28,8 @@ public class FunsDayAdapter extends RecyclerView.Adapter<FunsDayAdapter.ViewHold
     class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView subject_name;
-        private TextView subject_cabinetAndTeacher;
+        private TextView subject_cabinet;
+        private TextView subject_teacher;
         private TextView subject_time;
         private Switch switch1;
 
@@ -36,7 +37,8 @@ public class FunsDayAdapter extends RecyclerView.Adapter<FunsDayAdapter.ViewHold
             super(itemView);
             subject_name = (TextView) itemView.findViewById(R.id.subject_name);
             subject_time = (TextView) itemView.findViewById(R.id.subject_time);
-            subject_cabinetAndTeacher = (TextView) itemView.findViewById(R.id.subject_cab_and_teacher);
+            subject_cabinet = (TextView) itemView.findViewById(R.id.subject_cab);
+            subject_teacher = (TextView) itemView.findViewById(R.id.subject_teacher);
             switch1 = (Switch) itemView.findViewById(R.id.switch1);
             switch1.setChecked(true);
             switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -46,11 +48,13 @@ public class FunsDayAdapter extends RecyclerView.Adapter<FunsDayAdapter.ViewHold
                     if(isChecked){
                         subject_name.setEnabled(true);
                         subject_time.setEnabled(true);
-                        subject_cabinetAndTeacher.setEnabled(true);
+                        subject_cabinet.setEnabled(true);
+                        subject_teacher.setEnabled(true);
                     }else{
                         subject_name.setEnabled(false);
                         subject_time.setEnabled(false);
-                        subject_cabinetAndTeacher.setEnabled(false);
+                        subject_cabinet.setEnabled(false);
+                        subject_teacher.setEnabled(false);
                     }
                 }
             });
@@ -78,8 +82,10 @@ public class FunsDayAdapter extends RecyclerView.Adapter<FunsDayAdapter.ViewHold
         Subject record = mDataset.get(position);
         holder.subject_name.setText(record.getName());
 
-        holder.subject_time.setText(Funs.getInstance().getTime().getTimeOfClassStr(position+1));
-        holder.subject_cabinetAndTeacher.setText(record.getCabinet() + record.getTeacher());
+        holder.subject_time.setText(Funs.getInstance().getTime().getTimeOfClassStr(record.getIndex()));
+        holder.subject_cabinet.setText(record.getCabinet());
+        holder.subject_teacher.setText(record.getTeacher());
+
     }
 
     // Return the size of your dataset (invoked by the layout manager)
