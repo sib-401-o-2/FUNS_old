@@ -86,6 +86,9 @@ public class FunsDayAdapter extends RecyclerView.Adapter<FunsDayAdapter.ViewHold
         holder.subject_cabinet.setText(record.getCabinet());
         holder.subject_teacher.setText(record.getTeacher());
 
+        int textcolor = Funs.getImportanceColor(record.getImportance());
+        if (textcolor != -1)
+            holder.subject_name.setTextColor(textcolor);
     }
 
     // Return the size of your dataset (invoked by the layout manager)

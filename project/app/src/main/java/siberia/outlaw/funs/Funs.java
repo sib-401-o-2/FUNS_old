@@ -1,5 +1,6 @@
 package siberia.outlaw.funs;
 
+import android.graphics.Color;
 import android.support.v4.content.res.TypedArrayUtils;
 
 import org.joda.time.Days;
@@ -78,6 +79,18 @@ public class Funs {
 
     public static FunsTime getTime() {
         return time;
+    }
+
+    public static int getImportanceColor(Subject.Importance i) {
+        switch (i) {
+            case LOW:
+                return Color.GREEN;
+            case MEDIUM:
+                return  Color.YELLOW;
+            case HEAVY:
+                return  Color.RED;
+        }
+        return -1;
     }
 
     public static FunsSchedule getSchedule() {
