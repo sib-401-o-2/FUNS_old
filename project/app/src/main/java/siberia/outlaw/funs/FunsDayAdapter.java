@@ -75,30 +75,11 @@ public class FunsDayAdapter extends RecyclerView.Adapter<FunsDayAdapter.ViewHold
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        //System.out.println("vh bind " + position);
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
-        //holder.mTextView.setText(mDataset[position]);
         Subject record = mDataset.get(position);
-//        int iconResourceId = 0;
-//        switch (record.getType()) {
-//            case GREEN:
-//                iconResourceId = R.drawable.green_circle;
-//                break;
-//            case RED:
-//                iconResourceId = R.drawable.red_circle;
-//                break;
-//            case YELLOW:
-//                iconResourceId = R.drawable.yellow_circle;
-//                break;
-//        }
-//        viewHolder.icon.setImageResource(iconResourceId);
         holder.subject_name.setText(record.getName());
-        holder.subject_time.setText("8:00\n13:00");
-        holder.subject_cabinetAndTeacher.setText(record.getCabinet() + record.getTeacher());
-//        viewHolder.deleteButtonListener.setRecord(record);
-//        viewHolder.copyButtonListener.setRecord(record);
 
+        holder.subject_time.setText(Funs.getInstance().getTime().getTimeOfClassStr(position+1));
+        holder.subject_cabinetAndTeacher.setText(record.getCabinet() + record.getTeacher());
     }
 
     // Return the size of your dataset (invoked by the layout manager)

@@ -60,7 +60,11 @@ public class FunsTime {
         }
         if (index > 3)
             addition += greatBreak - standardClassBreak;
-        return startTime.plusMinutes(addition - standardBreak);
+        return startTime.plusMinutes(addition - standardClassBreak);
+    }
+
+    String getTimeOfClassStr(int index) {
+        return new StringBuilder(getStartOfClass(index).toString("HH:mm")).append("—").append(getEndOfClass(index).toString("HH:mm")).toString();
     }
 
     public LocalDate getSemesterBeginning() {
