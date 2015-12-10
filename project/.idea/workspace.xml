@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5d7edb54-74ec-4d0c-9c1b-73f3c96088f5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/Funs.java" afterPath="$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/Funs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_subject.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_subject.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project.iws" />
@@ -60,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/FunsScheduleParser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="134" column="46" selection-start-line="134" selection-start-column="46" selection-end-line="134" selection-end-column="46" />
+              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -70,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/FunsSchedule.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
+              <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -90,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/FunsPageAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,10 +100,13 @@
       <file leaf-file-name="Funs.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/Funs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.516129">
-              <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.61858976">
+              <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2017#2026#0" expanded="true" />
+                <element signature="e#4612#4613#0" expanded="true" />
+                <element signature="e#4654#4655#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1975,7 +1977,7 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4504065" sideWeight="0.49394855" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4504065" sideWeight="0.49394855" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.50907713" order="8" side_tool="true" content_ui="tabs" />
@@ -2043,7 +2045,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2088,6 +2090,9 @@
           <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2017#2026#0" expanded="true" />
+            <element signature="e#4612#4613#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2156,6 +2161,9 @@
           <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2017#2026#0" expanded="true" />
+            <element signature="e#4612#4613#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2224,6 +2232,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2017#2026#0" expanded="true" />
+            <element signature="e#4612#4613#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2436,39 +2447,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/Subject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-          <folding>
-            <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#1145#1146#0" expanded="true" />
-            <element signature="e#1175#1176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/FunsTime.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="130" selection-start-line="66" selection-start-column="130" selection-end-line="66" selection-end-column="130" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/FunsScheduleParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="134" column="46" selection-start-line="134" selection-start-column="46" selection-end-line="134" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/FunsSchedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -2484,6 +2466,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/Subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+          <folding>
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#1145#1146#0" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/FunsPageAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/FunsDayAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.839285">
@@ -2492,22 +2497,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/FunsPageAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/FunsScheduleParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/FunsSchedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/siberia/outlaw/funs/Funs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.516129">
-          <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.61858976">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2017#2026#0" expanded="true" />
+            <element signature="e#4612#4613#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
           </folding>
         </state>
       </provider>
