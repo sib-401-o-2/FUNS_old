@@ -23,7 +23,7 @@ Class imortance:
 schedule.json:		// if no such file, FUNS will search for this two:
 	scheduleOdd.json:	// for odd weeks
 	scheduleEven.json:	// for even weeks
-{
+				// courses will be taken from odd file{
 	"version": 1,
 	"courses":[
 		{
