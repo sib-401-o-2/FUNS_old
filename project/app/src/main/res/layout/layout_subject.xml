@@ -1,93 +1,66 @@
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--android:orientation="vertical" android:layout_width="match_parent"-->
-    <!--android:layout_height="32dp">-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/title"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:textSize="24dp"/>-->
-<!--</LinearLayout>-->
-
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="65dp"
-    android:orientation="horizontal">
-
-    <!--<ImageView-->
-        <!--android:id="@+id/recyclerViewItemIcon"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentStart="true"-->
-        <!--android:layout_centerVertical="true"-->
-        <!--android:layout_marginRight="8dp"-->
-        <!--android:layout_marginLeft="8dp"-->
-        <!--android:src="@drawable/"/>-->
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/subject_time"
-        android:layout_width="80dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/subject_time"
         android:layout_centerVertical="true"
-        tools:text="name"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="0.5dp"
-        android:layout_marginRight="0.5dp"
-        android:gravity="center_vertical|center_horizontal" />
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center_vertical" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="175dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="center">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large Text"
-            android:id="@+id/subject_name"
-            android:layout_gravity="center"
-            android:gravity="center_horizontal" />
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center">
-
-            <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Small Text"
-            android:id="@+id/subject_cab"
-            android:layout_gravity="center"
-            android:gravity="center_horizontal" />
-
-            <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Small Text"
-            android:id="@+id/subject_teacher"
-            android:layout_gravity="center"
-            android:gravity="center_horizontal" />
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <Switch
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/switch1"
-        android:layout_gravity="center" />
+        android:layout_gravity="center_vertical">
 
-    <!--android:layout_toRightOf="@+id/recyclerViewItemIcon"-->
-    <!--android:layout_toEndOf="@+id/recyclerViewItemIcon"-->
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch1"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:checked="false" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/switch1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:id="@+id/subject_name"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Medium Text"
+                    android:id="@+id/subject_cab"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Small Text"
+                    android:id="@+id/subject_teacher"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
 </LinearLayout>
