@@ -15,9 +15,11 @@ import java.util.List;
  */
 public class FunsDayAdapter extends RecyclerView.Adapter<FunsDayAdapter.ViewHolder> {
     private List<Subject> mDataset;
+    private int dayPosition;
 
     public FunsDayAdapter(int position) {
         this.mDataset = Funs.getInstance().getSubjectsList(position);
+        dayPosition = position;
 
         System.out.println("records created " + mDataset.size());
     }
@@ -33,6 +35,57 @@ public class FunsDayAdapter extends RecyclerView.Adapter<FunsDayAdapter.ViewHold
         private TextView subject_time;
         private Switch switch1;
 
+        //        private LocalDate date;
+        private int classPosition;
+        private int dayPosition;
+        private String cid;
+
+        private boolean creating = true;
+
+        public String getCid() {
+            return cid;
+        }
+
+        public int getDayPosition() {
+            return dayPosition;
+        }
+
+        public int getClassPosition() {
+            return classPosition;
+        }
+
+        public void setAdditionalInfo(/*LocalDate date, */int dayPosition, int classPosition, String cid) {
+//            this.date = date;
+            this.classPosition = classPosition;
+            this.dayPosition = dayPosition;
+            this.cid = cid;
+        }
+
+        public void onStatusChanged(boolean status) {
+            //if (!creating)
+            Funs.getInstance().classStatusChanged(this, status);
+        }
+
+        public void setEnabled(boolean enabled) {
+            if (creating) {
+                switch1.setChecked(enabled);
+                switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                        System.out.println("checked");
+                        setEnabled(isChecked);
+                    }
+                });
+                creating = false;
+            } else {
+                onStatusChanged(enabled);
+            }
+            subject_name.setEnabled(enabled);
+            subject_time.setEnabled(enabled);
+            subject_cabinet.setEnabled(enabled);
+            subject_teacher.setEnabled(enabled);
+        }
+
         public ViewHolder(final View itemView) {
             super(itemView);
             subject_name = (TextView) itemView.findViewById(R.id.subject_name);
@@ -40,24 +93,7 @@ public class FunsDayAdapter extends RecyclerView.Adapter<FunsDayAdapter.ViewHold
             subject_cabinet = (TextView) itemView.findViewById(R.id.subject_cab);
             subject_teacher = (TextView) itemView.findViewById(R.id.subject_teacher);
             switch1 = (Switch) itemView.findViewById(R.id.switch1);
-            switch1.setChecked(true);
-            switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    System.out.println("checked");
-                    if(isChecked){
-                        subject_name.setEnabled(true);
-                        subject_time.setEnabled(true);
-                        subject_cabinet.setEnabled(true);
-                        subject_teacher.setEnabled(true);
-                    }else{
-                        subject_name.setEnabled(false);
-                        subject_time.setEnabled(false);
-                        subject_cabinet.setEnabled(false);
-                        subject_teacher.setEnabled(false);
-                    }
-                }
-            });
+            //switch1.setChecked(true);
 //            icon = (ImageView) itemView.findViewById(R.id.recyclerViewItemIcon);
 //            deleteButton = (Button) itemView.findViewById(R.id.recyclerViewItemDeleteButton);
 //            copyButton = (Button) itemView.findViewById(R.id.recyclerViewItemCopyButton);
@@ -80,6 +116,10 @@ public class FunsDayAdapter extends RecyclerView.Adapter<FunsDayAdapter.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Subject record = mDataset.get(position);
+
+        Funs.getInstance().setAdditionalInfo(holder, record ,dayPosition, position);
+        Funs.getInstance().setIsEnabledClass(holder);
+
         holder.subject_name.setText(record.getName());
 
         holder.subject_time.setText(Funs.getInstance().getTime().getTimeOfClassStr(record.getIndex()));

@@ -1,5 +1,6 @@
 package siberia.outlaw.funs;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.support.v4.content.res.TypedArrayUtils;
 
@@ -26,6 +27,7 @@ public class Funs {
     private static FunsTime time;
     private static FunsSchedule schedule;
     private static ArrayList<ArrayList<Subject>> subjects;
+    private static FunsSqlite db;
 
     private Funs() {
         time = FunsTimeParser.getTime(funsDirName + timeFilename);
@@ -136,6 +138,41 @@ public class Funs {
     public static List<Subject> getSubjectsList(int position) {
         System.out.println();
         return subjects.get(getDayIndexFromDate(getDateFromPosition(position)));
+    }
+
+    public static void setContext(Context context) {
+        db = new FunsSqlite(context);
+//        db.setDayIndexStats(LocalDate.now(), 3, 666, 1);
+//        db.getDayStats(LocalDate.now());
+//        int k = db.getDayIndexStats(LocalDate.now(), 3);
+//        System.out.println(k);
+    }
+
+    public static void setAdditionalInfo(FunsDayAdapter.ViewHolder holder, Subject subject, int dayPosition, int classPosition) {
+        holder.setAdditionalInfo(dayPosition, classPosition, subject.getName());
+    }
+
+    public static void classStatusChanged(FunsDayAdapter.ViewHolder holder, boolean status) {
+        LocalDate date = getDateFromPosition(holder.getDayPosition());
+        int index = holder.getClassPosition() + 1;
+        int _status = 666;
+        if (!status) {
+            _status = 0;
+        }
+        System.out.println("status changed to " + _status);
+        db.setDayIndexStats(date, index, _status, holder.getCid());
+    }
+
+    public void setIsEnabledClass(FunsDayAdapter.ViewHolder holder) {
+        LocalDate date = getDateFromPosition(holder.getDayPosition());
+        int index = holder.getClassPosition() + 1;
+        int status = db.getDayIndexStats(date, index);
+        System.out.println("status getted is " + status);
+        if (0 == status)
+            holder.setEnabled(false);
+        else
+            holder.setEnabled(true);
+//        holder.created();
     }
 
     private static class FunsHolder {
