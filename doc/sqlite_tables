@@ -1,0 +1,7 @@
+Table "stats"
+Colums:
+	_id INT PRIMARY
+	cid INT
+	date TEXT
+	index INT
+	on INT
